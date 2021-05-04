@@ -1,0 +1,102 @@
+@import '../../styles/variables.scss';
+
+.landingpage {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content  {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90vh;
+
+        @media only screen and (max-width: $sw-medium) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__box {
+        padding-top: 20rem;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @media only screen and (max-width: $sw-medium) {
+            padding-top: 10rem;
+            margin-left: 2rem;
+        }
+    }
+
+    &__header {
+        color: $color-white;
+        font-weight: 900;
+        font-size: 9rem;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: $sw-big) {
+            margin-left: 2rem;
+        }
+        @media only screen and (max-width: $sw-medium) {
+            font-size: 7rem;
+        }
+    }
+
+    &__text {
+        font-size: 5rem;
+        font-weight: 300;
+        color: $color-white;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        outline: none;
+        background-color: inherit;
+        border: none;
+        transition: all .4s;
+        &:hover {
+            cursor: pointer;
+            transform: translateY(5rem);
+        }
+    }
+
+    &__banner {
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+        height: 70vh;
+        width: 20vw;
+        background-color: $color-yellow-primary;
+        align-self: flex-start;
+        padding: auto;
+        text-align: center;
+
+       
+
+        @media only screen and (max-width: $sw-big) {
+            width: 30vw;
+            margin-right: 2rem;
+        }
+        @media only screen and (max-width: $sw-medium) {
+            height: 30vh;
+            width: 100%;
+        }
+
+        
+
+        &-text {
+        font-size: 5.5rem;
+        text-transform: uppercase;
+        color: $color-black;
+        font-weight: 800;
+        margin-top: 20rem;
+
+        @media only screen and (max-width: $sw-medium) {
+            margin-top: 5rem;
+        }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@import '../../styles/variables.scss';
+
+.projects {
+    min-height: 100vh;
+    width: 100%;
+    background-color: $color-grey-primary;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    &__header {
+        font-size: 8rem;
+        text-transform: uppercase;
+        color: $color-white;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 10rem;
+    }
+
+    &__item {
+        width: 40rem;
+        height: 50rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 5px solid $color-yellow-primary;
+        border-radius: 1rem;
+        margin-top: 4rem;
+        &:hover > &-box {
+            opacity: 1;
+            visibility: visible;
+            transition-delay: .5s;
+        }
+        &:hover > &-info {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(0%);
+        }
+        
+
+        &-info {
+            transition: all .5s;
+            transform: translateY(50%);
+            height: 50%;
+            text-align: center;
+        }
+
+        &-header {
+            font-size: 4rem;
+            color: $color-yellow-primary;
+            text-transform: uppercase;
+            text-align: center;
+            word-wrap: break-word;
+            font-weight: 900;
+        }
+
+        &-underline {
+            height: 0.5rem;
+            width: 90%;
+            background-color: $color-white;
+            margin: 0 auto 0 auto;
+        }
+
+        &-about {
+            text-align: center;
+            font-size: 2rem;
+            color: $color-white;
+            padding: 2rem;
+            font-weight: 500;
+        }
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-35%);
+            opacity: 0;
+            visibility: hidden; 
+            transition: all .5s;
+        }
+
+        &-btn {
+            height: 6rem;
+            width: 16rem;
+            background-color: $color-yellow-primary;
+            outline: none;
+            border: none;
+            color: $color-black;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem;
+            border-radius: 2rem;
+            transition: all .2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            & > img {
+                height: 5rem;
+            }
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+
+        &-link {
+            
+            text-decoration: none;    
+        }
+
+        &-icon {
+            height: 6rem;
+            margin: 0.5rem;
+        }
+    }
+}

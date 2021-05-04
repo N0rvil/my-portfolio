@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: $color-grey-primary;
+    display: flex;
+    position: relative;
+
+    @media only screen and (max-width: $sw-large) {
+        height: 80vh;
+    }
+
+    @media only screen and (max-width: $sw-big) {
+        height: 60vh;
+    }
+
+    @media only screen and (max-width: $sw-medium) {
+        height: 50vh;
+    }
+
+    @media only screen and (max-width: $sw-smaller) {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    
+
+    &__box {
+        width: 50%;
+        height: 100vh;
+        background-color: $color-grey-primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+
+        @media only screen and (max-width: $sw-large) {
+            height: 80vh;
+        }
+
+        @media only screen and (max-width: $sw-big) {
+            height: 60vh;
+        }
+
+        @media only screen and (max-width: $sw-medium) {
+            height: 50vh;
+        }
+
+        @media only screen and (max-width: $sw-smaller) {
+            width: 100%;
+        }
+
+
+    }
+
+    &__info {
+        position: absolute;
+        top: 15%;
+        right: 40%;
+        width: 60rem;
+        border: 8px solid $color-yellow-primary;
+        padding: 2rem;
+        background-color: $color-grey-primary;
+
+        @media only screen and (max-width: $sw-big) {
+            position: relative;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+        &-header {
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 6rem;
+            font-weight: 600;
+        }
+        &-text {
+            color: $color-white;
+            font-size: 2.8rem;
+            font-weight: 300;
+            padding-left: 1rem;
+        }
+    }
+}
+

@@ -1,0 +1,141 @@
+@import '../../styles/variables.scss';
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 2rem;
+
+    &__header {
+        font-size: 8rem;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-left: 2rem;
+    }
+
+    &__form {
+        margin: 5rem auto 0 auto;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5rem;
+        padding-right: 5rem;
+
+        @media only screen and (max-width: $sw-big) {
+            margin: 2rem auto 0 auto;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @media only screen and (max-width: $sw-smaller) {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &-content {
+            width: 65%;
+            
+        }
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__input {
+        width: 45%;
+        height: 6rem;
+        background-color: $color-grey-primary;
+        border: 3px solid $color-yellow-primary;
+        font-size: 2.2rem;
+        padding: 1rem;
+
+        @media only screen and (max-width: $sw-smaller) {
+            width: 48%;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 40rem;
+        margin-top: 1rem;
+        background-color: $color-grey-primary;
+        border: 3px solid $color-yellow-primary;
+        font-size: 2.2rem;
+        padding: 1rem;
+
+
+    }
+
+    &__btn {
+        height: 30rem;
+        width: 30rem;
+        border: none;
+        outline: none;
+        background-color: $color-yellow-primary;
+        border-radius: 2rem;
+        transition: all .2s;
+
+        @media only screen and (max-width: $sw-big) {
+            width: 20rem;
+        }
+
+        @media only screen and (max-width: $sw-smaller) {
+            width: 60%;
+            height: 10rem;
+            margin-top: 2rem;
+        }
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        &-icon {
+            height: 10rem;
+
+            @media only screen and (max-width: $sw-smaller) {
+                height: 6rem;
+            }
+        }
+    }
+
+    &__box {
+        margin-top: 2rem;
+        margin-left: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 45%;
+        font-size: 2.6rem;
+        color: $color-white;
+        padding-left: 18rem;
+        height: 10rem;
+
+        @media only screen and (max-width: $sw-big) {
+            padding-left: 0;
+            margin: 2rem auto 0 auto;
+        }
+
+        @media only screen and (max-width: $sw-smaller) {
+            flex-direction: column;
+            margin: 5rem auto 0 auto; 
+        }
+    }
+
+    &__icon {
+        height: 8rem;
+    }
+
+    &__contact {
+        width: 100%;
+        text-align: center;
+
+        @media only screen and (max-width: $sw-smaller) {
+            width: auto;
+        }
+    }
+}
